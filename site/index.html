@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Czam | Treatwell Planity synchronisation</title>
-  <meta name="description" content="Czam est la solution qui synchronise automatiquement vos agendas sur Treatwell et Planity pour que vous puissiez en cumuler plusieurs pour augmenter la visibilité de votre salon et toucher plus de clients. Czam vous permet à utiliser Treatwell, Planity, Booksy, Fresha et Classpass en même temps, de manière simple et efficace.">
+  <title>Synchronisation Treatwell et Planity | Czam</title>
+  <meta name="description" content="Czam synchronise Treatwell, Planity, Google Calendar, Salonized et d’autres agendas pour éviter les doubles réservations. Une autre plateforme ? On en discute.">
   <link rel="canonical" href="https://www.czam.io/">
   <link rel="icon" href="./favicon.jpg" type="image/jpeg">
-  <meta property="og:title" content="Czam | Treatwell Planity synchronisation">
-  <meta property="og:description" content="Czam est la solution qui synchronise automatiquement vos agendas sur Treatwell et Planity pour que vous puissiez en cumuler plusieurs pour augmenter la visibilité de votre salon et toucher plus de clients. Czam vous permet à utiliser Treatwell, Planity, Booksy, Fresha et Classpass en même temps, de manière simple et efficace.">
+  <meta property="og:title" content="Treatwell et Planity, enfin synchronisés | Czam">
+  <meta property="og:description" content="Czam synchronise Treatwell, Planity, Google Calendar, Salonized et d’autres agendas, sans double réservation ni gestion manuelle.">
   <meta property="og:url" content="https://www.czam.io/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://www.czam.io/images/logiciels.webp">
+  <meta name="twitter:card" content="summary_large_image">
   
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,89 +21,184 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;560;650&family=Fraunces:opsz,wght@9..144,560;9..144,650&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/site.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Czam", "url": "https://www.czam.io/", "email": "czam.forest.io@gmail.com", "telephone": "+33668713211", "description": "Czam est la solution qui synchronise automatiquement vos agendas sur Treatwell et Planity pour que vous puissiez en cumuler plusieurs pour augmenter la visibilité de votre salon et toucher plus de clients. Czam vous permet à utiliser Treatwell, Planity, Booksy, Fresha et Classpass en même temps, de manière simple et efficace."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Czam", "url": "https://www.czam.io/", "email": "czam.forest.io@gmail.com", "telephone": "+33668713211", "description": "Czam synchronise Treatwell, Planity, Google Calendar, Salonized et d’autres agendas pour éviter les doubles réservations."}</script>
 </head>
 <body>
   <header class="wrap site-header">
-    <a class="logo" href="./"><img src="./images/logo.svg" alt="Czam"></a>
+    <a class="logo" href="./" aria-label="Czam"><img src="./images/logo.svg" alt=""><span class="logo-text" aria-hidden="true">zam</span></a>
     <nav>
       <a href="./">Accueil</a>
       <a href="./blog/">Blog</a>
-      <a href="./#contact">Contact</a>
+      <a class="nav-cta" href="mailto:czam.forest.io@gmail.com?subject=Synchroniser%20mes%20agendas">Contact</a>
     </nav>
   </header>
   
 <main>
-  <section class="wrap hero">
-    <p class="eyebrow">Synchronisez · Simplifiez · Grandissez</p>
-    <h1>Un seul outil.<br>Plus de réservations.</h1>
-    <p class="lede">Czam est la solution qui synchronise automatiquement vos agendas sur Treatwell et Planity.</p>
-    <p class="lede">Continuez à utiliser l'outil de votre choix tout en accueillant les clients de l'autre. Simplifiez votre gestion, maximisez votre visibilité !</p>
-    <p>Pourquoi se limiter à un seul outil de réservation, quand on peut en utiliser plusieurs et multiplier le nombre de clients ?</p>
-    <div class="actions">
-      <a class="button" href="#contact">Contactez-nous</a>
-      <a class="button-quiet" href="./blog/">Lire le blog</a>
+  <section class="hero-shell">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Traitez plus de réservations, pas plus d’agendas</p>
+        <h1>Plusieurs agendas. Une seule synchronisation.</h1>
+        <p class="lede">Czam bloque automatiquement un créneau dès qu’il est réservé sur une autre plateforme. Treatwell, Planity, Google Calendar, Salonized : vous gardez la visibilité, sans double réservation.</p>
+        <div class="actions">
+          <a class="button" href="mailto:czam.forest.io@gmail.com?subject=Synchroniser%20mes%20agendas">Nous écrire</a>
+          <a class="text-link" href="#fonctionnement">Voir comment ça marche <span aria-hidden="true">↓</span></a>
+        </div>
+        <ul class="hero-facts" aria-label="Informations clés">
+          <li>20 € HT / mois</li>
+          <li>Sans engagement</li>
+          <li>Installation accompagnée</li>
+        </ul>
+      </div>
+
+      <div class="sync-demo" aria-label="Une réservation Treatwell bloque le même créneau sur Planity et Google Calendar">
+        <div class="calendar-card">
+          <div class="calendar-head"><span class="platform-dot treatwell-dot"></span><strong>Treatwell</strong><span>10:30</span></div>
+          <div class="appointment booked"><span>10:30</span><strong>Réservation confirmée</strong></div>
+          <div class="appointment"><span>11:30</span><span>Disponible</span></div>
+        </div>
+        <div class="sync-line">
+          <span class="sync-pulse">Czam</span>
+          <span>Synchronisé automatiquement</span>
+        </div>
+        <div class="sync-targets">
+          <div class="calendar-card">
+            <div class="calendar-head"><span class="platform-dot planity-dot"></span><strong>Planity</strong></div>
+            <div class="appointment blocked"><span>10:30</span><strong>Créneau bloqué</strong></div>
+          </div>
+          <div class="calendar-card">
+            <div class="calendar-head"><span class="platform-dot google-dot"></span><strong>Google Calendar</strong></div>
+            <div class="appointment blocked"><span>10:30</span><strong>Créneau bloqué</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap platforms" id="plateformes" aria-label="Plateformes synchronisées">
+    <div class="section-heading">
+      <p class="eyebrow">Plateformes</p>
+      <h2>Déjà en place, et ouvert à la suivante.</h2>
+    </div>
+    <ul class="platform-list">
+      <li><strong>Treatwell</strong><span>Réservations en ligne</span></li>
+      <li><strong>Planity</strong><span>Réservations en ligne</span></li>
+      <li><strong>Google Calendar</strong><span>Agenda de l’équipe</span></li>
+      <li><strong>Salonized</strong><span>Gestion de salon</span></li>
+      <li><strong>Une autre ?</strong><span>On regarde ensemble si on peut la connecter.</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap section" id="fonctionnement">
+    <div class="section-heading">
+      <p class="eyebrow">Comment ça marche</p>
+      <h2>Vous gardez vos outils. Czam évite les conflits.</h2>
+      <p>La synchronisation se met en place avec vous, puis fonctionne en arrière-plan.</p>
+    </div>
+    <div class="how-grid">
+      <article class="step-card">
+        <span class="step-number">01</span>
+        <h3>Connectez vos agendas</h3>
+        <p>Nous connectons les agendas que vous utilisez déjà, puis nous vous guidons pendant l’installation.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">02</span>
+        <h3>Czam surveille les créneaux</h3>
+        <p>Lorsqu’une réservation arrive sur une plateforme, le même créneau est bloqué sur l’autre.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">03</span>
+        <h3>Vous accueillez vos clients</h3>
+        <p>Continuez à travailler dans vos outils habituels sans recopier les rendez-vous à la main.</p>
+      </article>
+    </div>
+    <p class="section-link"><a href="./post/démarche-avec-czam/">Voir la démarche d’installation complète</a></p>
+  </section>
+
+  <section class="trust-section">
+    <div class="wrap trust-grid">
+      <div>
+        <p class="eyebrow light">Vos accès, clairement expliqués</p>
+        <h2>Une synchronisation utile, pas un accès sans limite.</h2>
+        <p>Czam utilise vos accès uniquement pour consulter et enregistrer les rendez-vous nécessaires à la synchronisation. Certaines plateformes, comme Treatwell ou Planity, ne permettent pas de limiter davantage les droits d’un collaborateur.</p>
+        <a class="light-link" href="./post/démarche-avec-czam/#faq">Lire les réponses sur les accès et les données</a>
+      </div>
+      <ul class="trust-list">
+        <li><strong>Fiches clients non utilisées</strong><span>Czam n’en fait rien. Seuls les rendez-vous servent à bloquer les créneaux.</span></li>
+        <li><strong>Accompagnement humain</strong><span>Nous vous aidons à connecter chaque plateforme.</span></li>
+        <li><strong>Sans engagement</strong><span>Vous pouvez suspendre ou résilier sous 48 h.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap section story-section">
+    <div class="section-heading">
+      <p class="eyebrow">Pensé dans un salon</p>
+      <h2>Créé par des esthéticiennes qui avaient le même problème.</h2>
+    </div>
+    <div class="story-grid">
+      <div class="story-number">
+        <strong>+40 %</strong>
+        <span>de chiffre d’affaires observé dans notre salon en deux mois après l’ajout de Planity à Treatwell.</span>
+      </div>
+      <div>
+        <p>Nous voulions profiter de la visibilité des deux plateformes sans passer nos journées à recopier les rendez-vous. C’est ainsi qu’est né Czam.</p>
+        <p class="fine-print">Résultat observé dans notre propre salon sur une période de deux mois. Les résultats varient selon l’établissement, sa zone et son activité.</p>
+      </div>
     </div>
   </section>
 
   <section class="wrap section">
-    <h2>Notre expertise</h2>
-    <div class="panel">
-      <p>Czam, la solution innovante qui synchronise automatiquement tous vos agendas. Vous n’avez rien à faire, sauf accueillir davantage de clients. Laissez Czam gérer le reste pour vous !</p>
-      <ol class="steps">
-        <li><strong>Étape 1 :</strong> Inscrivez-vous sur Treatwell et Planity si vous n’êtes pas encore client(e). Pour Treatwell, nous pouvons négocier un tarif avantageux pour vous grâce à notre partenariat exclusif.</li>
-        <li><strong>Étape 2 :</strong> Ajoutez Czam comme collaborateur sur Treatwell et Planity, ou déléguez les accès à Czam. Soyez rassuré(e), ces accès sont strictement utilisés pour synchroniser vos agendas.</li>
-        <li><strong>Étape 3 :</strong> Il n’y a pas d’étape 3 ! Vos agendas sont maintenant synchronisés automatiquement, sans aucun effort supplémentaire de votre part.</li>
-      </ol>
+    <div class="section-heading">
+      <p class="eyebrow">Retours de salons</p>
+      <h2>Ce que nos clients retiennent</h2>
     </div>
-  </section>
-
-  <section class="wrap section">
-    <h2>Créé par les esthéticien(ne)s pour les esthéticien(ne)s</h2>
-    <p>En tant que propriétaires de salons de beauté, tout comme vous, nous avons cherché à augmenter notre chiffre d’affaires tout en simplifiant nos processus au maximum. C’est ainsi qu’est né Czam.</p>
-    <p>En seulement deux mois, après avoir ajouté Planity à notre plateforme principale, Treatwell, grâce à Czam, nous avons enregistré une incroyable augmentation de 40 % de notre chiffre d’affaires.</p>
-    <p>Vous aussi, adoptez Czam et boostez vos résultats dès aujourd’hui !</p>
-  </section>
-
-  <section class="wrap section">
-    <h2>Vos témoignages</h2>
     <div class="quotes">
       <blockquote>
-        <p>« Nous utilisions Planity et Treatwell en même temps depuis quelques mois. Il y a plus de clients mais la gestion était compliquée. Czam nous a sauvé, rien n'est plu simple, ça vaut le coût. »</p>
+        <p>« Czam nous a sauvés de la gestion compliquée entre Planity et Treatwell. »</p>
         <footer>Mai Lan · Maan Nails</footer>
       </blockquote>
       <blockquote>
-        <p>« J'ai jamais pensé à cumuler autant d'outils parce que pour moi c'est trop compliqué. Mais en adoptant Czam cela devient simple, c'est juste comme on utilise un seul outils mais le nombre de clients se multiplie. C'est incroyable ! »</p>
+        <p>« Nous utilisons plusieurs outils comme un seul, tout en touchant plus de clients. »</p>
         <footer>Alain B. · B for Beauty</footer>
       </blockquote>
       <blockquote>
-        <p>« Merci à l'équipe Czam qui m'a aidé à rendre mes services plus visibles. Le début du parcours entrepreneur n'était pas simple mais vous m'avez aider à surmonter les défis. »</p>
+        <p>« L’équipe Czam nous a aidés à rendre nos services plus visibles. »</p>
         <footer>Vu P. · Helia Nails</footer>
       </blockquote>
     </div>
   </section>
 
-  <section class="wrap section split">
-    <div>
-      <h2>Notre tarif unique</h2>
+  <section class="wrap section pricing-section">
+    <div class="pricing-copy">
+      <p class="eyebrow">Un tarif simple</p>
+      <h2>Un seul tarif, quel que soit le nombre d’agendas connectés.</h2>
+      <p>L’installation est accompagnée. Aucun engagement annuel, aucun pourcentage sur vos réservations.</p>
     </div>
     <div class="price-card">
       <p class="price">20 <small>€ HT / mois</small></p>
-      <p>sans engagement</p>
       <ul>
-        <li>Synchronisation des agendas</li>
-        <li>Jusqu’à 5 agendas supportés</li>
-        <li>Support 24/7</li>
-        <li>Conseil SEO gratuit</li>
+        <li>Treatwell, Planity, Google Calendar, Salonized</li>
+        <li>Jusqu’à 5 agendas</li>
+        <li>Autre plateforme étudiée sur demande</li>
+        <li>Aide à l’installation</li>
+        <li>Pause ou résiliation sous 48 h</li>
       </ul>
+      <a class="button button-light" href="mailto:czam.forest.io@gmail.com?subject=Vérifier%20la%20compatibilité%20de%20mes%20agendas">Vérifier mes agendas</a>
     </div>
   </section>
 
-  <section class="wrap section" id="contact">
-    <h2>Contactez-nous</h2>
-    <div class="contact-grid">
-      <a class="contact-card" href="tel:+33668713211"><span>Appelez-nous</span>+33 6 68 71 32 11</a>
-      <a class="contact-card" href="mailto:czam.forest.io@gmail.com"><span>Écrivez-nous</span>czam.forest.io@gmail.com</a>
+  <section class="final-cta" id="contact">
+    <div class="wrap final-cta-inner">
+      <div>
+        <p class="eyebrow">Prêt à simplifier vos réservations ?</p>
+        <h2>Vérifions ensemble vos agendas.</h2>
+        <p>Écrivez-nous pour confirmer vos agendas. Si vous utilisez une autre plateforme, dites-le-nous : on regarde si on peut la prendre en charge.</p>
+      </div>
+      <div class="final-actions">
+        <a class="button" href="mailto:czam.forest.io@gmail.com?subject=Synchroniser%20mes%20agendas">Nous écrire</a>
+        <a href="tel:+33668713211">Ou appelez le 06 68 71 32 11</a>
+      </div>
     </div>
   </section>
 </main>
